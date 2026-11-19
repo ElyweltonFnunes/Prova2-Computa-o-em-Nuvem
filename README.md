@@ -88,7 +88,7 @@ meu-nginx-664dc46b97-2dmlf   1/1     Running   0          2m52s
 meu-nginx-664dc46b97-w5sgt   1/1     Running   0          16s
 meu-nginx-664dc46b97-wmdf4   1/1     Running   0          6m24s
 
-Evidencia 6 - Service e acesso HTTP
+Evidencia 6 = Service e acesso HTTP
 root@controlplane:~/meu-nginx$ kubectl get services
 NAME         TYPE        CLUSTER-IP   EXTERNAL-IP   PORT(S)   AGE
 kubernetes   ClusterIP   10.96.0.1    <none>        443/TCP   13d
@@ -96,7 +96,7 @@ kubernetes   ClusterIP   10.96.0.1    <none>        443/TCP   13d
 root@controlplane:~/meu-nginx$ kubectl run teste --image=curlimages/curl --rm -it --restart=never -- curl http://meu-nginx-service
 error: invalid restart policy: never, valid values are: Always, OnFailure, Never
 
-6 - Interpretação dos resultados
+6 = Interpretação dos resultados
 Questão 1 = Qual é a diferença entre uma imagem Docker e um contêiner em execução?
 Uma imagem Docker é um modelo estático e somente leitura com o código, dependências e configurações da aplicação, enquanto um contêiner em execução é uma instância ativa e mutável dessa imagem rodando no sistema.
 
