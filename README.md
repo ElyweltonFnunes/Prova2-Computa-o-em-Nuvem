@@ -58,6 +58,17 @@ root@controlplane:~/meu-nginx$ curl http://localhost:8080
 </html>
 root@controlplane:~/meu-nginx$
 
+Evidencia 3 - Deployment e Pod
+root@controlplane:~/meu-nginx$ kubectl get deployments
+NAME        READY   UP-TO-DATE   AVAILABLE   AGE
+meu-nginx   2/2     2            2           21s
+root@controlplane:~/meu-nginx$ kubectl get pods
+NAME                         READY   STATUS    RESTARTS   AGE
+meu-nginx-664dc46b97-6fnqn   1/1     Running   0          57s
+meu-nginx-664dc46b97-wmdf4   1/1     Running   0          57s
+root@controlplane:~/meu-nginx$ kubectl get rs
+NAME                   DESIRED   CURRENT   READY   AGE
+meu-nginx-664dc46b97   2         2         2       70s
 
 
 
