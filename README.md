@@ -96,6 +96,18 @@ kubernetes   ClusterIP   10.96.0.1    <none>        443/TCP   13d
 root@controlplane:~/meu-nginx$ kubectl run teste --image=curlimages/curl --rm -it --restart=never -- curl http://meu-nginx-service
 error: invalid restart policy: never, valid values are: Always, OnFailure, Never
 
+6 - Interpretação dos resultados
+Questão 1 - Qual é a diferença entre uma imagem Docker e um contêiner em execução?
+Uma imagem Docker é um modelo estático e somente leitura com o código, dependências e configurações da aplicação, enquanto um contêiner em execução é uma instância ativa e mutável dessa imagem rodando no sistema.
+
+Questão 2 - Qual é a função de um deployment no Kubernetes?
+Deployment gerencia de forma declarativa o ciclo de vida de aplicações executadas em Pods, garantindo o estado desejado do cluster. Ele atua uma camada acima do ReplicaSet, controlando a criação, escalabilidade e atualização das instâncias.
+
+Questão 3 - O que aconteceu quando você excluiu um pod? Por que isso aconteceu?
+O pod foi substituido logo que foi deletado por um pod novo.
+
+Questão 4 - Qual é a finalidade de um service no kubernetes?
+Fornece um ponto de rede estável (IP virtual e nome DNS) para acessar um conjunto de Pods que mudam de endereço ao serem criados, escalados ou substituídos.
 
 
 
