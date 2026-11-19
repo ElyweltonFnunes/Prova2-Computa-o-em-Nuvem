@@ -79,6 +79,17 @@ meu-nginx-664dc46b97-2dmlf   1/1     Running   0          16s
 meu-nginx-664dc46b97-6fnqn   1/1     Running   0          3m48s
 meu-nginx-664dc46b97-wmdf4   1/1     Running   0          3m48s
 
+Evidencia 5 - Autorrecuperação
+root@controlplane:~/meu-nginx$ kubectl delete pod meu-nginx-664dc46b97-6fnqn
+pod "meu-nginx-664dc46b97-6fnqn" deleted from default namespace
+root@controlplane:~/meu-nginx$ kubectl get pods
+NAME                         READY   STATUS    RESTARTS   AGE
+meu-nginx-664dc46b97-2dmlf   1/1     Running   0          2m52s
+meu-nginx-664dc46b97-w5sgt   1/1     Running   0          16s
+meu-nginx-664dc46b97-wmdf4   1/1     Running   0          6m24s
+
+
+
 
 
 
