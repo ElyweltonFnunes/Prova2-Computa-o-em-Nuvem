@@ -17,6 +17,38 @@ Evidência 1 Contêiner em execução
 root@ubuntu:~$ docker ps
 CONTAINER ID   IMAGE     COMMAND   CREATED   STATUS    PORTS     NAMES
 
+Evidencia 1 - container em execução
+root@controlplane:~$ docker ps
+CONTAINER ID   IMAGE     COMMAND   CREATED   STATUS    PORTS     NAMES
+
+Evidencia 2 - Página personalizada
+root@controlplane:~/meu-nginx$ curl http://localhost:8080
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Meu servidor Nginx</title>
+    <style>
+        body {
+            background-color: #202b38;
+            color: white;
+            font-family: Arial;
+            text-align: center;
+            padding-top: 100px;
+        }
+        h1 {
+            color: #00ff99;
+            font-size: 40px;
+        }
+
+        p {
+            font-size: 20px;
+        }
+    </style>
+</head>
+<body>
+
+
 
 
 
